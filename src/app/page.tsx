@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import Hero from '@components/ui/home/Hero'
 import Description from '@components/ui/home/Description'
+import HomeVideo from '@components/ui/home/HomeVideo'
 
 export const metadata: Metadata = {
   title: '리그오브레전드',
@@ -13,6 +14,7 @@ const HomePage = () => {
     <main className="bg-white dark:bg-slate-800">
       <Hero />
       <Description />
+      <HomeVideo />
     </main>
   )
 }
