@@ -30,10 +30,10 @@ const ChampionWidthItemCard = ({ champion, item }: ChampionWidthItemCardProps) =
               : `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/${item?.image.full}`
           }
         />
-        <div className="text-base text-blue-800 dark:text-white font-semibold">
+        <div className="text-base text-slate-900 dark:text-white font-semibold">
           {champion ? champion.name : item?.name ? removeHtmlTags(item.name) : '설명이 없습니다.'}
         </div>
-        <div className="text-sm break-keep text-blue-500 dark:text-gray-500">
+        <div className="text-sm break-keep text-slate-700 dark:text-gray-500">
           {champion ? champion.title : item?.plaintext ? removeHtmlTags(item.plaintext) : '설명이 없습니다.'}
         </div>
       </div>

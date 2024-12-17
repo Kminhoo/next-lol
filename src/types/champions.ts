@@ -39,3 +39,69 @@ export interface Champion {
   partype: string
   stats: State
 }
+
+// 챔피언 디테일 타입
+type ChampionSkin = {
+  id: string
+  num: number
+  name: string
+  chromas: boolean
+}
+
+type ChampionStats = {
+  [key: string]: number
+}
+
+export type Spells = {
+  id: string
+  name: string
+  description: string
+  tooltip: string
+  leveltip: {
+    label: string[]
+    effect: string[]
+  }
+  maxrank: number
+  cooldown: number[]
+  cooldownBurn: string
+  cost: number[]
+  costBurn: string
+  datavalues: Record<string, unknown>
+  effect: (number[] | null)[]
+  effectBurn: (string | null)[]
+  vars: unknown[]
+  costType: string
+  maxammo: string
+  range: number[]
+  rangeBurn: string
+  image: Image
+  resource: string
+}
+
+type ChampionPassive = {
+  name: string
+  description: string
+  image: Image
+}
+
+export type ChampionDetailData = {
+  [key: string]: {
+    id: string
+    key: string
+    name: string
+    title: string
+    image: Image
+    skins: ChampionSkin[]
+    lore: string
+    blurb: string
+    allytips: string[]
+    enemytips: string[]
+    tags: string[]
+    partype: string
+    info: Info
+    stats: ChampionStats
+    spells: Spells[]
+    passive: ChampionPassive
+    recommended: string[]
+  }
+}

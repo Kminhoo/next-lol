@@ -1,6 +1,6 @@
 'use server'
 
-import { ResponseData } from '@tsc/champions'
+import { ChampionDetailData, ResponseData } from '@tsc/champions'
 
 const fetchApiVersion = async (): Promise<string> => {
   try {
@@ -44,6 +44,31 @@ export const fetchChampionList = async (): Promise<ResponseData> => {
   } catch (error) {
     if (error instanceof Error) {
       console.error(`챔피언 목록 가져오기 실패: ${error.message}`)
+    } else {
+      console.error('알 수 없는 에러가 발생했습니다.')
+    }
+
+    throw error
+  }
+}
+
+export const fetchChampionDetail = async (id: string): Promise<ChampionDetailData> => {
+  try {
+    const version = await fetchApiVersion()
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/champion/${id}.json`)
+
+    console.log('실행')
+
+    if (!response.ok) {
+      throw new Error(`챔피언 정보 요청 실패. 상태 코드: ${response.status}`)
+    }
+
+    const data = await response.json()
+
+    return data.data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(`챔피언 정보 가져오기 실패: ${error.message}`)
     } else {
       console.error('알 수 없는 에러가 발생했습니다.')
     }
