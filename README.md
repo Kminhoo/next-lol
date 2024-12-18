@@ -72,7 +72,7 @@
 
 |            브라우저            |           브라우저           |               모바일               |               모바일               |
 | :----------------------------: | :--------------------------: | :--------------------------------: | :--------------------------------: |
-| ![Home](./src/assets/home.png) | ![Dex](./src/assets/dex.png) | ![Detail](./src/assets/detail.png) | ![Detail](./src/assets/detail.png) |
+| ![GOMCAM20241218_2055230719-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/354d6a0b-c79d-4f28-9c91-563b35242fdb) | ![GOMCAM20241218_2054560458-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/339d10f3-3889-48b7-afbd-bbe1ba2c8bd4) | ![GOMCAM20241218_2056020172-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/5bbffa79-fc1d-4af5-960a-d4e8c3f19908) | ![GOMCAM20241218_2055470641-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e9e714a0-1af2-4670-9bad-04882b8d5b82) |
 
 ## 🛠️ 설치 및 실행
 
