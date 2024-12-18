@@ -39,9 +39,11 @@ const Header = () => {
   const toggleTheme = () => {
     if (darkMode) {
       document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
       setDarkMode(false)
     } else {
       document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
       setDarkMode(true)
     }
   }
@@ -49,6 +51,13 @@ const Header = () => {
   useEffect(() => {
     closeMenu()
   }, [pathName, closeMenu])
+
+  useEffect(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
 
   return (
     <header className="shadow-md bg-white dark:bg-slate-800 transition-all">
