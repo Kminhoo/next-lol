@@ -28,8 +28,6 @@ export const GET = async (request: Request): Promise<NextResponse> => {
 
     const filteredChampions = champions.filter((champion) => championId.includes(+champion.key))
 
-    console.log('filteredChampions', filteredChampions)
-
     return NextResponse.json(filteredChampions)
   } catch (error: any) {
     return NextResponse.json(

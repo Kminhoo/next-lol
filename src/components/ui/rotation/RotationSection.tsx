@@ -12,7 +12,8 @@ import { getChampionRotation } from '@utils/riotApi'
 const RotationSection = () => {
   const { data, isPending, isError } = useQuery({
     queryKey: ['rotataion'],
-    queryFn: getChampionRotation
+    queryFn: getChampionRotation,
+    retry: 3
   })
 
   if (isPending) {
