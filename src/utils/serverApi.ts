@@ -56,7 +56,9 @@ export const fetchChampionList = async (): Promise<ResponseData> => {
 export const fetchChampionDetail = async (id: string): Promise<ChampionDetailData> => {
   try {
     const version = await fetchApiVersion()
-    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/champion/${id}.json`)
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/champion/${id}.json`, {
+      cache: 'no-store'
+    })
 
     console.log('실행')
 
@@ -82,7 +84,9 @@ export const fetchItemList = async (): Promise<Item> => {
   try {
     const version = await fetchApiVersion()
 
-    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/item.json`)
+    const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/item.json`, {
+      cache: 'force-cache'
+    })
 
     const data = await response.json()
 

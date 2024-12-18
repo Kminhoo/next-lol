@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query'
 
 import ChampionWidthItemCard from '@components/common/ChampionWidthItemCard'
+import SkeletonSection from '@components/ui/skeleton/SkeletonSection'
 
 import { Champion } from '@tsc/champions'
 
@@ -15,7 +16,7 @@ const RotationSection = () => {
   })
 
   if (isPending) {
-    return <div>로딩 중...</div>
+    return <SkeletonSection />
   }
 
   if (isError) {

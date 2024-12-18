@@ -9,7 +9,7 @@ const ChampionSection = async () => {
   const champions: Champion[] = Object.values(data)
 
   return (
-    <section>
+    <section className="bg-inherit">
       <div className="max-w-7xl m-auto py-[50px]">
         <h1 className="text-xl font-bold mb-6 text-center text-slate-900 dark:text-white">챔피언 목록</h1>
         <div className="grid grid-cols-2 gap-4 p-2 m-auto md:grid-cols-3 lg:grid-cols-5">

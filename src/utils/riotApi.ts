@@ -1,4 +1,6 @@
-export const getChampionRotation = async () => {
+import { Champion } from '@tsc/champions'
+
+export const getChampionRotation = async (): Promise<Champion[]> => {
   const response = await fetch('/api/rotation')
 
   if (!response.ok) {
