@@ -60,8 +60,6 @@ export const fetchChampionDetail = async (id: string): Promise<ChampionDetailDat
       cache: 'no-store'
     })
 
-    console.log('실행')
-
     if (!response.ok) {
       throw new Error(`챔피언 정보 요청 실패. 상태 코드: ${response.status}`)
     }

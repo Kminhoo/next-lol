@@ -8,5 +8,6 @@ export const getChampionRotation = async (): Promise<Champion[]> => {
   }
 
   const data = await response.json()
+
   return data
 }
